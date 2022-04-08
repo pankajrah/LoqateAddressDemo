@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Address Example</title>
+    <link rel="stylesheet" href="./address.css" />
+	<script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"THETO11123",host:"THETO11123.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//THETO11123.pcapredict.com/js/sensor.js")</script>
+</head>
+<body id="home">
+    <div class="content">
+        <div class="field">
+            <label for="txtAddress">Address</label>
+            <input id="txtAddress" type="text" placeholder="Start typing your address" autocomplete="none" />
+            <span style="display: inline-block; cursor: pointer" class="manual-address"><a onclick="showAddressFields()">Click here</a> to enter your address manually.</span>
+
+            <div class="address-label">
+                <span></span>
+                <a onclick="showAddressFields()">Edit address</a>
+            </div>
+
+            <div class="address-fields">
+                <div class="field">
+                    <label for="txtCompany">Company</label>
+                    <input id="txtCompany" type="text" />
+                </div>
+                <div class="field">
+                    <label for="txtLine1">Line 1</label>
+                    <input id="txtLine1" type="text" />
+                </div>
+                <div class="field">
+                    <label for="txtLine2">Line 2</label>
+                    <input id="txtLine2" type="text" />
+                </div>
+                <div class="field">
+                    <label for="txtLine3">Line 3</label>
+                    <input id="txtLine3" type="text" />
+                </div>
+                <div class="field">
+                    <label for="txtLine4">Line 4</label>
+                    <input id="txtLine4" type="text" />
+                </div>
+                <div class="field">
+                    <label for="txtCity">City</label>
+                    <input id="txtCity" type="text" />
+                </div>
+                <div class="field">
+                    <label for="txtState">State</label>
+                    <input id="txtState" type="text" />
+                </div>
+                <div class="field">
+                    <label for="txtPostcode">Postal code</label>
+                    <input id="txtPostcode" type="text" />
+                </div>
+                <!--  <div class="field">
+                     <label for="ddlCountry">Country</label>
+                     <select id="ddlCountry"></select>
+                 </div>-->
+            </div>
+
+        </div>
+		<a style="display: inline-block; cursor: pointer; font-size:22px; padding: 0 20px; border-radius: 3px" class="btn" id="run_process">Run Process</a>
+		 <fieldset>
+
+                            <h4 class="tight-bottom" style="padding-top:24px;">Address Line Output</h4>              
+                
+            	            <div class="field">
+                                <div class="tdv"><div class="input_textarea w3 outputs" id="addblock1"></div></div>
+				            </div>
+
+                        </fieldset>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    </div>
+
+    <script type="text/javascript">
+        var demoLanguage = 'en-us';
+        var demoKeyOverride = 'FC59-CX45-XD13-MU79';
+        var geoLocation = false;
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+			//document.querySelector('.manual-address').style.display = 'none';
+            document.querySelector('.address-label').style.display = 'none';
+            document.querySelector('.address-fields').style.display = 'none';
+        }
+
+        function hideAddressComponents() {
+            document.getElementById('txtAddress').style.display = 'none';
+            document.querySelector('.manual-address').style.display = 'none';
+            document.querySelector('.address-label').style.display = 'none';
+            document.querySelector('.address-fields').style.display = 'none';
+        }
+        function showAddressFields() {
+            hideAddressComponents();
+            document.querySelector('.address-fields').style.display = 'block';
+			<!-- document.getElementById('txtCompany').value = ''; -->
+			<!-- document.getElementById('txtLine1').value = ''; -->
+			<!-- document.getElementById('txtLine2').value = ''; -->
+			<!-- document.getElementById('txtLine3').value = ''; -->
+			<!-- document.getElementById('txtLine4').value = ''; -->
+			<!-- document.getElementById('txtCity').value = ''; -->
+			<!-- document.getElementById('txtState').value = ''; -->
+			<!-- document.getElementById('txtPostcode').value = ''; -->
+        }
+    </script>
+    <script type="text/javascript" defer src="https://services.pcapredict.com/js/address-3.91.min.js?ver=4.7.3"></script>
+    <script src="./address.js" defer type="text/javascript"></script>
+</body>
+</html>
